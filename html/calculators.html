@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name="description" content="Track your fitness">
+      <meta name="keywords" content="one, two, three">
+
+    <title>Calculators</title>
+
+    <!-- external CSS link -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
+
+    <!-- jquery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  </head>
+  <body>
+   <header>
+    <h1>Calculators</h1>
+      <nav>
+        <div class="navs"><a href="progress_tracker.html">Progress Tracker</a></div>
+        <div class="navs"><a href="../index.html">Home</a></div>
+      </nav>
+    </header>
+    <h2>Choose Your Calculator!</h2>
+      <div id='button_container'>
+        <button class="popup" onclick="bmr_show()">Basal Metablic Rate</button>
+        <button class="popup" onclick="tdee_show()">Total Daily Energy Expenditure</button>
+        <button class="popup" onclick="macro_show()">Macronutrients</button>
+      </div>
+      <div id='fc'><img src="../images/fitness-calculator.jpg"/></div>
+      <hr>
+
+      <!-- BMR Calculater Starts Here -->
+      <form id="popupbmr">
+      <h3>Calculate your Basal Metabolic Rate</h3>
+        <div id='container'>
+        <input id="age" name="age" placeholder="Enter your age" type="number">
+        <input id="height" name="height" placeholder="Enter your height in cm" type="number">
+        <input id="weight" name="weight" placeholder="Enter your weight in lb" type="number">
+        <h4>Gender</h4>
+          <div class="container"> 
+          <select id='gender'>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+          </select>  
+          </div>
+        </div>
+        <button class="get" onclick="calculate_bmr()" 
+        onsubmit='return false'>Get BMR</button>
+        <h5>Your BMR</h5>
+        <span id='show_bmr'>0</span>
+      </form>
+      <hr>
+
+    <!-- TDEE Calculater Starts Here -->
+      <form id="popuptdee">
+      <h3>Calculate your Total Daily Energy Expenditure</h3>
+        <div id='container'>
+        <input id="bmr" name="bmr" placeholder="Enter your BMR" type="number">
+        <h4>Select your activity level</h4>
+          <select id='activity_level'>
+            <option value="la">Lightly Active (sedentary lifestyle)</option>
+            <option value="ma">Moderately Active (intense exercise; sedentary lifestyle)</option>
+            <option value="va">Very Active (moderate exercise; active lifestyle)</option>
+            <option value="ea">Extra Active (intense exercise; active lifestyle)</option>
+          </select>
+          </div>
+        <button class="get" onclick="calculate_tdee()">Get TDEE</button>
+        <h5>Your TDEE</h5>
+        <span id='show_tdee'>0</span>
+      </form>
+      <hr>
+
+      <!-- Macronutrient Calculater Starts Here -->
+      <form id="popupmacro">
+      <h3>Calculate the Macronutrients you need in a day</h3>
+        <div id='container'>
+        <input id="tdee" name="tdee" placeholder="Enter your TDEE" type="number">
+        <h4>Select your fitness goal</h4>
+          <div class="container">
+            <select id='fitness_goal'>
+              <option value="fat_loss">Fat Loss</option>
+              <option value="maintainence">Maintanence</option>
+              <option value="muscle_gain">Muscle Gain</option>
+            </select>
+            </div>
+          </div>
+        <button class="get" onclick="calculate_macros()">Get Macronutrients</button>
+        <h5>Your Macronutrients for the Day</h5>
+        <div id='display_macros'>
+          <p>Calories</p><span id='calories'>0</span>
+          <p>Protein</p><span id='protein'>0</span>
+          <p>Carbohydrates</p><span id='carbs'>0</span>
+          <p>Fat</p><span id='fats'>0</span>
+        </div>
+      </form>
+  <!-- main.js -->
+    <script type="text/javascript" src="../js/main.js"></script>
+  </body>
+</html>

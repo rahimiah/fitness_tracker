@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name="description" content="Track your fitness">
+      <meta name="keywords" content="one, two, three">
+
+    <title>The Fitness Journal</title>
+
+    <!-- external CSS link -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
+
+    <!-- jquery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  </head>
+  <body>
+   <header>
+    <h1>The Fitness Journal</h1>
+      <nav>
+        <div class="navs"><a href="html/calculators.html">Calculators</a></div>
+        <div class="navs"><a href="html/progress_tracker.html">Progress Tracker</a></div>
+      </nav>
+   </header>
+      <div id='image_holder'>
+        <div id='zane' onclick="show_zq()"></div>
+        <div id='arnold' onclick="show_aq()"></div>
+        <div id='paige' onclick="show_pq()"></div>
+      </div>
+      <div id='display_quote'>
+          <p class='quote' id='zane_quote'>"The more you are obsessed by something, the better chance you have with achieving it."</p><br>
+          <p class='quote' id='arnold_quote'>"Strength does not come from winning. Your struggles develop your strengths. When you go through hardships and decide not to surrender, that is strength."</p><br>
+          <p class='quote' id='paige_quote'>"Don't look back, you're not going that way."</p>
+      </div>
+  <!-- main.js -->
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
+

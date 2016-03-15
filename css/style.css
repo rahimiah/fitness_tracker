@@ -1,0 +1,158 @@
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.fl {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+body {font-family: Open Sans; background-color: black; height: 100%;}
+
+header { background-color: #F54040; width: 100%; height: 75px;
+         border-bottom: 3px white solid; }
+
+h1 { text-align: center; font-size: 36px; 
+     color: #FFF; float: left; margin: 20px; 
+     font-weight: bold; margin-left: 50px; margin-bottom: 0px; 
+     font-family: 'Shadows Into Light Two', cursive; }
+
+nav { width: 800px; float: right; 
+      margin: 25px; margin-bottom: 0px; }
+
+.navs { text-align: center; float: right;
+        width: 150px; font-size: 24px; 
+        font-weight: 600; }
+
+a { text-decoration: none; font-size: 20px; 
+    font-weight: 600; color: white; 
+    font-family: 'Shadows Into Light Two', cursive; }
+
+#image_holder { display: flex; width: 100%;}
+
+#zane { background-image: url('../images/frank-zane.jpg');
+        width: 25%; height: 500px; background-size: cover;
+        margin-right: 3%; }
+
+#arnold { background-image: url('../images/arnold.jpg');
+          width: 44%; height: 500px; background-size: cover; 
+          margin-right: 3%}
+
+
+#paige { background-image: url('../images/paige-hathaway.jpg');
+         width: 25%; height: 500px; background-size: cover; }
+
+#display_quote { margin-top: 20px; height: 100%; }
+
+.quote { color: #F54040; font-size: 34px; 
+         font-family: 'Shadows Into Light Two', cursive;
+         text-align: center; display: none;}
+
+h2 { color: #F54040; font-size: 34px; 
+    font-family: 'Shadows Into Light Two', cursive;
+    text-align: center; margin-top: 20px; }
+
+#button_container { margin-top: 30px; text-align: center;}
+
+.popup { color: #F54040; ; font-size: 20px; 
+         font-family: 'Shadows Into Light Two', cursive;
+         background-color: white; }
+
+select { color: white; font-size: 20px; 
+         font-family: 'Shadows Into Light Two', cursive;
+         background-color: #F54040; text-align: center;
+         margin-top: 30px; margin-left: 45%; }
+
+#fc { margin-top: 50px; text-align: center; }
+
+#image_holder3 { display: flex; height: 100%; width: 97%;
+                 margin-top: 50px; }
+
+#bp { background-size: cover; width: 25%; height: 100%; }
+
+#ohp { background-size: cover; width: 25%; height: 100%; }
+
+#dl { background-size: cover; width: 25%; height: 100%; }
+
+#squat { background-size: cover; width: 25%; height: 100%; }
+
+h3 { color: #F54040; font-size: 24px; 
+     font-family: 'Shadows Into Light Two', cursive;
+     margin-top: 50px; text-align: center;}
+
+h4 { color: #F54040; font-size: 24px; 
+     font-family: 'Shadows Into Light Two', cursive;
+     margin-top: 30px;}   
+
+h5 { color: #F54040; font-size: 24px; 
+     font-family: 'Shadows Into Light Two', cursive;
+     margin-top: 50px; }  
+
+#popupbmr { background-color: white; text-align: center;
+             border: 5px solid gray; width: 50%; margin-right: auto;
+             margin-left: auto; height: 500px; margin-top: 50px; 
+             margin-bottom: 50px; display: none;  } 
+
+#popuptdee { background-color: white; text-align: center;
+             border: 5px solid gray; width: 50%; margin-right: auto;
+             margin-left: auto; height: 450px; margin-top: 50px; 
+             margin-bottom: 50px; display: none; }
+
+#popupmacro { background-color: white; text-align: center;
+             border: 5px solid gray; width: 50%; margin-right: auto;
+             margin-left: auto; height: 650px; margin-top: 50px; 
+             margin-bottom: 50px; display: none; }
+
+#container { display: block; margin-top: 2%;}
+
+input { font-size: 20px; width: 40%; font-style: cursive;
+       display: inline-block; height: 50%; margin-top: 2%;  
+       text-align: center; }
+
+#activity_level { margin-left: auto; }
+
+.get { color: #F54040; ; font-size: 20px; 
+       font-family: 'Shadows Into Light Two', cursive;
+       background-color: white; margin-top: 5%; }
+
+.container { margin-right: 30%; }
+
+#display_macros { margin-top: 4%; }
+
+p { color: #F54040; ; font-size: 24px; 
+    font-family: 'Shadows Into Light Two', cursive; }
+
+span { color: black; ; font-size: 24px; 
+       font-family: 'Shadows Into Light Two', cursive; }
+
+#progress_button { text-align: center; margin-top: -25px;}
+
+#chart { margin-top: 5%; text-align: center; margin-right: auto; 
+         margin-left: auto; }
+
+#chart_container { display: block; margin-left: auto;
+                   margin-right: auto; margin-top: 25px;
+                   }
