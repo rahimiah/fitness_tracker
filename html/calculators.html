@@ -17,7 +17,7 @@
   </head>
   <body>
    <header>
-    <h1>Calculators</h1>
+    <a href="../index.html"><h1>Calculators</h1></a>
       <nav>
         <div class="navs"><a href="progress_tracker.html">Progress Tracker</a></div>
         <div class="navs"><a href="../index.html">Home</a></div>
@@ -29,9 +29,7 @@
         <button class="popup" onclick="tdee_show()">Total Daily Energy Expenditure</button>
         <button class="popup" onclick="macro_show()">Macronutrients</button>
       </div>
-      <div id='fc'><img src="../images/fitness-calculator.jpg"/></div>
-      <hr>
-
+      <div id='calculator_container'>
       <!-- BMR Calculater Starts Here -->
       <form id="popupbmr">
       <h3>Calculate your Basal Metabolic Rate</h3>
@@ -52,7 +50,6 @@
         <h5>Your BMR</h5>
         <span id='show_bmr'>0</span>
       </form>
-      <hr>
 
     <!-- TDEE Calculater Starts Here -->
       <form id="popuptdee">
@@ -71,7 +68,6 @@
         <h5>Your TDEE</h5>
         <span id='show_tdee'>0</span>
       </form>
-      <hr>
 
       <!-- Macronutrient Calculater Starts Here -->
       <form id="popupmacro">
@@ -96,6 +92,7 @@
           <p>Fat</p><span id='fats'>0</span>
         </div>
       </form>
+      </div>
   <!-- main.js -->
     <script type="text/javascript" src="../js/main.js"></script>
   </body>

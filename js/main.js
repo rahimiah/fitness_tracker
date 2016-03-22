@@ -1,42 +1,62 @@
-//Function To Display Popup
-function bmr_show() {
-  $('#popupbmr').show();
-}
-
-function tdee_show() {
-  $('#popuptdee').show();
-}
-
-function macro_show() {
-  $('#popupmacro').show();
-}
-
+//Show quotes
 function show_zq(){
   $('.quote').css('display', 'none');
-  $('#zane_quote').show();
+  $('#zane_quote').css('visibility','visible').hide().fadeIn('slow');
+  $("html, body").animate({ 
+    scrollTop: $(document).height()-$(window).height() });
 }
 
 function show_aq(){
   $('.quote').css('display', 'none');
-  $('#arnold_quote').show();
+  $('#arnold_quote').css('visibility','visible').hide().fadeIn('slow');
+  $("html, body").animate({ 
+    scrollTop: $(document).height()-$(window).height() });
 }
 
 function show_pq(){
   $('.quote').css('display', 'none');
-  $('#paige_quote').show();
+  $('#paige_quote').css('visibility','visible').hide().fadeIn('slow');
+  $("html, body").animate({ 
+    scrollTop: $(document).height()-$(window).height() });
+}
+
+//Function To Display Popup
+function bmr_show() {
+if($('#popupbmr').is(":visible")){
+  $('#popupbmr').hide();
+} else {
+  $('#popupbmr').show();
+}
+}
+
+
+function tdee_show() {
+  if($('#popuptdee').is(":visible")){
+  $('#popuptdee').hide();
+} else {
+  $('#popuptdee').show();
+}
+}
+
+function macro_show() {
+  if($('#popupmacro').is(":visible")){
+  $('#popupmacro').hide();
+} else {
+  $('#popupmacro').show();
+}
 }
 
 //Function to Calculate Basal Metabolic Rate
 function calculate_bmr(){
   event.preventDefault();
   var bmr = 0; 
-  if($('#gender').val() === 'female'){
-    bmr = 66 + (($('#weight').val() * 6.23) + ($('#height').val() * 12.7) 
-      - ($('#age').val() * 6.8)); 
+  if($('#gender').val() === 'male'){
+    bmr = Math.round(66 + (($('#weight').val() * 6.23) + ($('#height').val() * 12.7 
+      - ($('#age').val() * 6.8)))); 
     $('#show_bmr').html(bmr);
   } else {
-    bmr = 655 + (($('#weight').val() * 4.35) + ($('#height').val() * 4.7) 
-      - ($('#age').val() * 4.7));
+    bmr = Math.round(655 + (($('#weight').val() * 4.35) + ($('#height').val() * 4.7) 
+      - ($('#age').val() * 4.7)));
     $('#show_bmr').html(bmr + ' kcals');
   }
 }
@@ -85,11 +105,36 @@ function calculate_macros(){
   $('#fats').html(fats + ' grams');
 }
 
-$(function () {
+//Scroll to chart on exercise selection
+  $('#bp').on('click', function(){
+    $("html, body").animate({ 
+    scrollTop: $(document).height()-$(window).height() });
+  });
+
+  $('#ohp').on('click', function(){
+    $("html, body").animate({ 
+    scrollTop: $(document).height()-$(window).height() });
+  });
+
+  $('#dl').on('click', function(){
+    $("html, body").animate({ 
+    scrollTop: $(document).height()-$(window).height() });
+  });
+
+  $('#squat').on('click', function(){
+    $("html, body").animate({ 
+    scrollTop: $(document).height()-$(window).height() });
+  });
+
+//High Chart 
+  $(function () {
     $('#chart_container').highcharts({
         chart: {},
          title: {
-          text: 'Exercise'
+          text: 'Exercise',
+          style: {
+            color: 'red'
+          }
          },
 
         xAxis: {
@@ -97,22 +142,32 @@ $(function () {
           title: {
                 text: 'Time Frame',
                 style: {
-                    fontWeight: 'bold'
+                    fontWeight: 'bold',
+                    color: 'black'
                 }
-            }
+            },
         },
 
          yAxis: {
             title: {
                 text: 'Weight',
                 style: {
-                    fontWeight: 'bold'
+                    fontWeight: 'bold',
+                    color: 'black'
                 }
-            }
+            },
+            gridLineColor: '#333'
         },
 
         series: [{
-            data: []
+            data: [],
+            color: 'red',
+            shadow: {
+              color: 'gray',
+              width: 10,
+              offsetX: 0,
+              offsetY: 0
+            }
         }]
     });
 
